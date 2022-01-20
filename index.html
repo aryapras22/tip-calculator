@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="">
+  </header>
+
+  <main>
+
+    <div class="container">
+
+      <div class="container-input">
+        <form action="index.html" method="post">
+          <label for="">Bill</label><br>
+          <input id="bill" type="number" class="input-bill font-input" name="" value="" placeholder="0">
+        </form>
+        <form id="tip" action="index.html" method="post">
+          <label for="">Select Tip %</label><br>
+          <input class="font-input btn-tip" type="button" name="" value="5%">
+          <input class="font-input btn-tip" type="button" name="" value="10%">
+          <input class="font-input btn-tip" type="button" name="" value="15%">
+          <input class="font-input btn-tip" type="button" name="" value="25%">
+          <input class="font-input btn-tip" type="button" name="" value="50%">
+          <input class="font-input btn-tip" type="number" name="" value="" placeholder="Custom">
+        </form>
+        <form action="index.html" method="post">
+          <label for="">Number of People</label>
+          <p class="false-notification">Can't be zero</p> <br>
+          <input type="number" id="people" class="input-people font-input" name="" value="" placeholder="0" oninvalid="peopleFalse()">
+        </form>
+      </div>
+      <div class="container-output">
+        <div class="tip-amount flex">
+          <div class="output-name">Tip Amount <p>/ person</p>
+          </div>
+          <div class="output-number">$0.00</div>
+        </div>
+        <div class="total flex">
+          <div class="output-name"> Total <p>/ person</p>
+          </div>
+          <div class="output-number">$0.00</div>
+        </div>
+        <input id="reset-button" class="font-input" type="button" name="Reset" value="RESET">
+      </div>
+    </div>
+
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">arya</a>.
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>

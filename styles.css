@@ -1,0 +1,262 @@
+/* main styles */
+body {
+  background: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+header {
+  text-align: center;
+  padding: 10% 0;
+}
+
+p {
+  margin: 0;
+  color: hsl(184, 14%, 56%);
+  font-size: 14px;
+}
+
+form {
+  padding: 5%;
+}
+
+input[type=number] {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  border: 1px solid hsl(189, 41%, 97%);
+  border-radius: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:focus-visible {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.container-input input[type=button]:hover, .container-output input[type=button]:hover, .container-output input[type="button"].button-reset:hover {
+  background-color: #9fe8df;
+  border: none;
+  color: hsl(183, 100%, 15%);
+}
+
+.false-notification {
+  color: #db6161;
+  display: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.input-people-false {
+  outline: 2px solid #db6161;
+}
+
+input[type=button] {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: hsl(189, 41%, 97%);
+  border: 1px solid hsl(183, 100%, 15%);
+  border-radius: 7px;
+}
+
+.container-input input[type=button].button-selected {
+  background-color: hsl(172, 67%, 45%);
+  border: 1px solid hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+#tip {
+  display: grid;
+  grid-gap: 15px;
+}
+
+#tip input[type=number] {
+  background-color: hsl(189, 41%, 97%);
+}
+
+#tip input[type=button], #tip input[type=number] {
+  padding: 5px 0;
+}
+
+.container {
+  background: hsl(0, 0%, 100%);
+  border-radius: 24px;
+}
+
+.container-input {
+  color: hsl(186, 14%, 43%);
+}
+
+.container-input input[type=button] {
+  background: hsl(183, 100%, 15%);
+}
+
+.input-bill {
+  background: url("images/icon-dollar.svg") hsl(189, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
+.input-people {
+  background: url("images/icon-person.svg") hsl(189, 41%, 97%);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
+.container-output {
+  background: hsl(183, 100%, 15%);
+  padding: 5% 3%;
+  border-radius: 18px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container-output input[type=button] {
+  width: 100%;
+  background: #0d686d;
+  color: hsl(183, 100%, 15%);
+  padding: 5px;
+  border: none;
+}
+
+.container-output input[type=button].button-reset {
+  background-color: hsl(172, 67%, 45%);
+  border: 1px solid hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.flex {
+  display: flex;
+}
+
+.output-name {
+  flex: 1;
+  color: white;
+}
+
+.output-number {
+  flex: 1;
+  color: hsl(172, 67%, 45%);
+  text-align: end;
+  font-size: 2rem;
+}
+
+.font-input {
+  font-size: 24px;
+}
+
+/* mobile styles */
+@media (max-width: 375px) {
+  body {
+    margin: 0;
+  }
+
+  #tip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .container {
+    padding: 5%;
+  }
+
+  .false-notification {
+    position: absolute;
+    right: 38px;
+    bottom: 377px;
+    font-size: 13px;
+  }
+
+  .container-output {
+    padding: 10% 5% 5%;
+    margin-top: 10px;
+  }
+
+  .container-output input[type=button] {
+    margin: 17px auto 8px;
+    padding: 8px;
+  }
+
+  .tip-amount, .total {
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
+
+/* desktop styles */
+@media (min-width:400px) and (max-width: 1440px) {
+  body {
+    height: 1000px;
+  }
+
+  header {
+    padding: 10% 0 5% 0;
+  }
+
+  main {
+    display: grid;
+    place-items: center;
+  }
+
+  form {
+    padding: 5% 14px;
+  }
+
+  #tip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #tip label {
+    grid-column: 1 / span 2;
+  }
+
+  .container {
+    display: flex;
+    width: 67%;
+    padding: 29px;
+  }
+
+  .container-input {
+    flex: 1;
+  }
+
+  .input-bill, .input-people {
+    width: 100%;
+    padding: 5px;
+    background-position: 20px;
+    margin-top: 9px;
+  }
+
+  .false-notification {
+    position: absolute;
+    left: 494px;
+    bottom: -8px;
+  }
+
+  .container-output {
+    flex: 1;
+    margin-left: 37px;
+  }
+
+  .container-output input[type=button] {
+    padding: 8px;
+  }
+
+  .tip-amount {
+    margin-top: 7px;
+    margin-bottom: 11px;
+    align-items: center;
+  }
+
+  .total {
+    margin-bottom: 136px;
+    align-items: center;
+  }
+
+  .output-number {
+    font-size: 3rem;
+  }
+}
