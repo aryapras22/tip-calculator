@@ -27,8 +27,13 @@ input[type=number] {
   text-align: right;
   border: 1px solid hsl(189, 41%, 97%);
   border-radius: 7px;
-  -webkit-appearance: none;
   -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"]:focus-visible {
